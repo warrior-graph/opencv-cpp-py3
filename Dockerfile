@@ -56,8 +56,8 @@ RUN cd && git clone https://github.com/opencv/opencv.git \
                 -D OPENCV_EXTRA_MODULES_PATH=../../opencv_contrib/modules \
                 -D BUILD_EXAMPLES=ON .. \
     && make -j`nproc` && make install \
-    && cd && rm -rf opencv*
-    && mv /usr/local/include/opencv4/opencv2 /usr/local/include/opencv2
+    && cd && rm -rf opencv* \
+    && mv /usr/local/include/opencv4/opencv2 /usr/local/include/opencv2 \
     && rm -rf /usr/local/include/opencv4
     
     
